@@ -1,0 +1,2 @@
+# jjanggu-django
+jjang-gu
