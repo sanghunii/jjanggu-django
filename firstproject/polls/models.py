@@ -14,11 +14,12 @@ class Question(models.Model):
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField("date published")
 
-    def __str__(self):
-        return self.question_text 
-    
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1) #datetime.timedelta(days=1)는 오늘로부터 하루 뒤 날짜를 계산하는데 이용된다. 
+"""
+    def __str__(self):
+        return self.question_text 
+""" 
     
 
 
